@@ -2,11 +2,6 @@ html {
     font-size: .9rem;
 }
 
-@media (min-width: 600px) {
-    html {
-        font-size: 1.3125rem;
-    }
-}
 
 body {
     text-align: center;
@@ -99,6 +94,13 @@ section {
     padding: 6.25em 0;
 }
 
+header {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding-top: 0;
+}
+
 .inverse {
     color: #fff;
     background: #252525;
@@ -123,4 +125,81 @@ section {
 .btn:focus {
     background: #252525;
     color: #fff;
+}
+
+@media (min-width: 600px) {
+    html {
+        font-size: 1.3125rem;
+    }
+}
+
+@media (min-width: 750px) {
+    .splitter {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .splitter section {
+        width: 50%;
+    }
+    
+    .articles.inverse {
+        background: #99D930;
+        color: #252525;
+    }
+    
+    .articles.inverse .accent-text,
+    .articles.inverse .name,
+    .articles.inverse time,
+    .articles.inverse a {
+        color: currentColor;
+    }
+    
+    .articles.inverse a:hover,
+    .articles.inverse a:focus {
+        color: #fff;
+    }
+
+    .articles.inverse h2 {
+        border-color: #252525;    /*shorthand property, solo cambia el color porque los otros atributos se cambiaron arriba*/
+    }
+
+    .articles.inverse .btn {
+        color: #fff;
+        background-color: #252525;
+    }
+    
+    .articles.inverse .btn:hover {
+        color: #252525;
+        background-color: #FFF;
+    }
+
+    .portfolio {
+        background: #252525;
+        color: #fff;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+    }
+
+    .portfolio .container {
+        max-width: 1200px;
+    }
+
+    .work {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .portfolio-item {
+        width: 28%;
+    }
+
+    .portfolio-item img {
+        height: 15em;
+        width: 100%;
+        object-fit: cover;
+    }
+    
 }
